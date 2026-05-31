@@ -8,7 +8,19 @@ A minimal, high-fidelity, and extremely efficient VS Code extension to convert `
 
 ---
 
-## _01 // FEATURES
+## _01 // VS CODE USAGE
+
+Once installed, you can generate beautifully styled PDFs from your Jupyter Notebooks in seconds:
+
+1. **Active Editor**: Open any `.ipynb` file in VS Code and click the **PDF icon** in the top-right editor toolbar.
+2. **File Explorer**: Right-click any `.ipynb` file in the Explorer sidebar and select **Convert Jupyter Notebook to PDF**.
+3. **Command Palette**: Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS), type `Convert Jupyter Notebook to PDF`, and press `Enter`.
+
+The extension automatically compiles your notebook, renders interactive formulas and plots, and prompts you to save the generated high-fidelity PDF document.
+
+---
+
+## _02 // FEATURES
 
 * **Offline Engine**: 100% local compilation. Zero telemetry, absolute privacy, and instant PDF rendering.
 * **Rich Content Support**: High-fidelity math ($LaTeX$) via KaTeX, code syntax highlighting via Prism.js, and styled Pandas tables & base64 plots.
@@ -17,7 +29,7 @@ A minimal, high-fidelity, and extremely efficient VS Code extension to convert `
 
 ---
 
-## _02 // PREVIEWS
+## _03 // PREVIEWS
 
 <p align="center">
   <img src="resources/sample_preview_1.png" width="280" style="margin: 10px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #e0ded9;" alt="Signal Processing: Spectral Estimation and Digital Signal Analysis PDF Export Preview" />
@@ -27,7 +39,7 @@ A minimal, high-fidelity, and extremely efficient VS Code extension to convert `
 
 ---
 
-## _03 // PIPELINE
+## _04 // PIPELINE
 
 <p align="center">
   <img src="resources/readme_architecture_blueprint.png" width="100%" alt="RenderPage Architecture Blueprint Schematic" />
@@ -35,7 +47,7 @@ A minimal, high-fidelity, and extremely efficient VS Code extension to convert `
 
 ---
 
-## _04 // CONFIGURATION
+## _05 // CONFIGURATION
 
 Customize the PDF output in your VS Code User/Workspace Settings or standard `settings.json`:
 
@@ -47,10 +59,10 @@ Customize the PDF output in your VS Code User/Workspace Settings or standard `se
 
 ---
 
-## _05 // QUICK START
+## _06 // DEVELOPMENT
 
-### 1. Requirements
-Prints documents using your local browser. It auto-detects standard paths for Google Chrome, Microsoft Edge, Brave, and Chromium on **Windows, macOS, and Linux**.
+### 1. System Requirements
+Prints documents using your local browser. It auto-detects standard paths for Google Chrome, Microsoft Edge, Brave, and Chromium on **Windows, macOS, and Linux**. If your browser is installed in a non-standard location, configure the `renderpage.chromePath` setting.
 
 ### 2. Compilation and Run
 To compile and test the extension locally:
@@ -62,4 +74,3 @@ npm install
 npm run compile
 ```
 * **To Debug**: Press `F5` to open the Extension Development Host window.
-* **To Export**: Open any `.ipynb` file, click the PDF button in the toolbar, or right-click the file in the Explorer tree and select **Convert Jupyter Notebook to PDF**.
