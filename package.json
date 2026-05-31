@@ -3,18 +3,18 @@
   "displayName": "RenderPage",
   "description": "Convert .ipynb Jupyter Notebooks to PDF completely offline using local Chromium/Chrome.",
   "version": "1.0.0",
-  "publisher": "ngx",
-  "author": "ngx",
+  "publisher": "Nannigalaxy",
+  "author": "Nannigalaxy",
   "license": "MIT",
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngx/renderpage.git"
+    "url": "https://github.com/Nannigalaxy/renderpage.git"
   },
   "bugs": {
-    "url": "https://github.com/ngx/renderpage/issues"
+    "url": "https://github.com/Nannigalaxy/renderpage/issues"
   },
-  "homepage": "https://github.com/ngx/renderpage#readme",
+  "homepage": "https://github.com/Nannigalaxy/renderpage#readme",
   "engines": {
     "vscode": "^1.80.0"
   },

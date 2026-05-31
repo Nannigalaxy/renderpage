@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="resources/readme_banner_blueprint.svg" width="100%" alt="RenderPage Blueprint Banner" />
+  <img src="resources/readme_banner_blueprint.png" width="100%" alt="RenderPage Blueprint Banner" />
 </p>
 
 # RenderPage
@@ -30,7 +30,7 @@ A minimal, high-fidelity, and extremely efficient VS Code extension to convert `
 ## _03 // PIPELINE
 
 <p align="center">
-  <img src="resources/readme_architecture_blueprint.svg" width="100%" alt="RenderPage Architecture Blueprint Schematic" />
+  <img src="resources/readme_architecture_blueprint.png" width="100%" alt="RenderPage Architecture Blueprint Schematic" />
 </p>
 
 ---
