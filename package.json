@@ -1,6 +1,6 @@
 {
-  "name": "renderpage",
-  "displayName": "RenderPage",
+  "name": "renderpagepdf",
+  "displayName": "RenderPage PDF",
   "description": "Convert .ipynb Jupyter Notebooks to PDF completely offline using local Chromium/Chrome.",
   "version": "1.0.0",
   "publisher": "Nannigalaxy",
