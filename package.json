@@ -1,0 +1,100 @@
+{
+  "name": "renderpage",
+  "displayName": "RenderPage",
+  "description": "Convert .ipynb Jupyter Notebooks to PDF completely offline using local Chromium/Chrome.",
+  "version": "1.0.0",
+  "publisher": "ngx",
+  "author": "ngx",
+  "license": "MIT",
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngx/renderpage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngx/renderpage/issues"
+  },
+  "homepage": "https://github.com/ngx/renderpage#readme",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Formatters"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "renderpage.convertToPdf",
+        "title": "Convert Jupyter Notebook to PDF",
+        "category": "Jupyter PDF"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .ipynb",
+          "command": "renderpage.convertToPdf",
+          "group": "navigation"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceExtname == .ipynb",
+          "command": "renderpage.convertToPdf",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Jupyter to PDF Converter",
+      "properties": {
+        "renderpage.chromePath": {
+          "type": "string",
+          "default": "",
+          "description": "Custom path to the Chrome/Chromium/Edge executable. If left blank, the extension will attempt to auto-detect it on your system."
+        },
+        "renderpage.margin": {
+          "type": "string",
+          "default": "15mm",
+          "description": "Page margins for the PDF document (e.g. '10mm', '0.5in', '20px')."
+        },
+        "renderpage.paperSize": {
+          "type": "string",
+          "enum": [
+            "A4",
+            "Letter",
+            "Legal",
+            "A3"
+          ],
+          "default": "A4",
+          "description": "Paper size for the PDF document."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "watch": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --watch",
+    "package": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "katex": "^0.16.9",
+    "marked": "^11.1.1",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.80.0",
+    "@types/katex": "^0.16.7",
+    "@types/marked": "^4.3.2",
+    "@types/prismjs": "^1.26.3",
+    "esbuild": "^0.19.11",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,35 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript / esbuild compilation directories
+out/
+dist/
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# VS Code test / log outputs
+.vscode-test/
+*.log
+
+# Packaged extensions
+*.vsix
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated samples / test artifacts (keep original sample notebooks)
+samples/*.html
+samples/*.pdf
+samples/*.png
+samples/*.ipynb
+!samples/sample.ipynb
+!samples/sample_languages.ipynb
+!samples/sample_r.ipynb
+!samples/large_cell.ipynb
